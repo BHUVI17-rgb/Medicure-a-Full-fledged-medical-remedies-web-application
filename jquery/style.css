@@ -1,0 +1,14 @@
+.bubble {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  #score{
+    font-size: xx-large;
+    font-family: sans-serifs;
+  }

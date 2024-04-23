@@ -1,0 +1,18 @@
+body{
+    background-image: url("../images/problem.png");
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#info{
+    width: 45%;
+    height: auto;
+    background-color: #C3ACD0;
+    margin-top: 10%;
+    margin-left: 30%;
+    border: solid 2px #C3ACD0;
+    border-radius: 25px;
+    text-align: center;
+}

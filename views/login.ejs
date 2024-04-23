@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- <style>
+      body{
+    background-image: url("/views/authbg.jpg");
+}
+#info{
+    width: 45%;
+    height: auto;
+    background-color: #C3ACD0;
+    margin-top: 10%;
+    margin-left: 30%;
+    border: solid 2px #C3ACD0;
+    border-radius: 25px;
+    text-align: center;
+}
+    </style> -->
+   <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="info">
+      <% if (locals.data1) { %>
+        <form action="/login" method="post">
+            <h4 style="text-align: center;">LOGIN</h4>
+            <% if (locals.datum) { %>
+            <p><%= datum %></p>
+            <% } %>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="pass">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br>
+            <p style="text-align: center;">Didn't have an account</p>
+          </form>
+         <a href="/create1"><button type="submit" class="btn btn-primary" style="text-align: center;">Then Register</button></a>
+         <% } %>
+         <% if (locals.data2) { %>
+          <form action="/create2">
+            <h4 style="text-align: center;">Register</h4>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">OTP</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br>
+          </form>
+          <% } %>
+          <% if (locals.data3) { %>
+          <% if(locals.datum) { %>
+            <p style="color: brown;"><%= datum %></p>
+            <% } %>
+          <form action="/create3" method="post">
+            <h4 style="text-align: center;">Complete Registration</h4>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="pass2">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            
+          </form>
+        <% } %>
+
+        <% if (locals.data4) { %>
+          <form action="/problem" method="post">
+            <h4 style="text-align: center;">Complete Registration</h4>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Your name</label>
+              <input type="text" class="form-control" name="pass1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            
+          </form>
+        <% } %>
+          
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    </script>
+
+</body>
+</html>
